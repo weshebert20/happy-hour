@@ -1,0 +1,275 @@
+/*styles for full body*/
+html,
+body,
+.view {
+    height: 100%;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/*background image styles*/
+.view {
+    background: url(../images/HH.jpeg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+ 
+/*logo*/
+.header_landing {
+	text-align: center;
+	color: white;
+	padding-top: 17%;
+	padding-bottom: 1%;
+	font-family: 'Ovo', serif;
+	animation-duration: 2s;
+  	animation-name: fadeIn;
+}
+
+.slogan {
+	text-align: center;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	animation-duration: 2s;
+  	animation-name: fadeIn;
+  	padding-bottom: 1%;
+}
+
+/*sign in buttons*/
+.btn {
+  margin:0 auto;
+  display:block;
+  padding: 16px;
+  animation-duration: 2s;
+  animation-name: fadeIn;
+}
+
+.log-in {
+	margin-right: 10px;
+}
+
+.sign-up {
+	margin-left: 0;
+}
+
+.header-form {
+	padding: 30px;
+}
+
+@media (max-width: 360px) {
+	div.row.justify-content-center {
+	width: 100%;
+	}
+
+	.log-in {
+	margin-left:9%;
+	width: 100%;
+	margin-right: 0;
+	margin-bottom: 3%;
+	}	
+
+	.sign-up {
+	margin-left:9%;
+	width:100%;
+	}
+
+	.header_landing {
+		padding-top: 20%;
+		font-size: 5rem;
+	}
+
+	.slogan {
+		font-size: 1rem;
+		margin-bottom: 13%;
+	}
+}
+
+
+@media (min-width: 361px) and (max-width: 767px) {
+div.row.justify-content-center {
+	width: 100%;
+	}
+
+	.log-in {
+	margin-left:8%;
+	width: 100%;
+	margin-right: 0;
+	margin-bottom: 3%;
+	}	
+
+	.sign-up {
+	margin-left:8%;
+	width:100%;
+	}
+
+	.header_landing {
+		padding-top: 27%;
+	}
+
+	.slogan {
+		margin-bottom: 17%;
+	}
+}
+
+/***********/
+/*Home page*/
+/***********/
+
+/*navigation*/
+#mainNav {
+	color: white;
+}
+
+.navColor {
+	background: rgba(43, 43, 43, 0.5);
+}
+
+.brand-name {
+	font-family: 'Ovo', serif;
+	font-size: 2rem;
+	color: white;
+}
+
+/*header photo*/
+.headerBrand {
+	height: 60%;
+	background: url(../images/bar.jpeg)no-repeat center center fixed;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*header about and search bar*/
+.about {
+	color: white;
+	margin-top: 20%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+.searchButton {
+	padding: 3%;
+}
+
+/*card styles*/
+.card {
+	width: 25rem;
+	-webkit-box-shadow: -8px -9px 59px -17px rgba(0,0,0,0.39);
+	-moz-box-shadow: -8px -9px 59px -17px rgba(0,0,0,0.39);
+	box-shadow: -8px -9px 59px -17px rgba(0,0,0,0.39);
+}
+
+.card-deck {
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.card-title {
+	font-family: 'Ovo', serif;
+	font-size: 1.5rem; 
+	padding: 2%;
+	font-weight: bold;
+	text-align: center;
+}
+
+.card-text {
+	padding: 2%;
+	text-align: center;
+}
+
+.hours {
+	font-weight: bold;
+}
+
+.rating {
+	font-weight: bold;
+	color: #3160DF;
+}
+
+.sites {
+	text-align: center;
+	padding: 3%;
+	background-color: #5cb85c;
+}
+
+.card-link {
+	color:white;
+}
+
+/*//home styles for phones*/
+@media (max-width: 359px) {
+	#mainNav {
+		height: 8%;
+	}
+
+	.row {
+		margin: 0;
+	}
+
+	.card {
+		width: auto;
+		margin-bottom: 3%;
+	}
+
+	.about {
+		font-size: 1rem;
+		margin-top: 27%;
+		margin-left: -3%;
+		margin-bottom: 2%;
+	}
+
+	.headerBrand {
+		height: 40%;
+	}
+
+	.searchButton {
+		padding: 7%;
+		margin-left: 0;
+	}
+}
+
+
+@media (min-width: 360px) and (max-width: 767px) {
+	#mainNav {
+		height: 8%;
+	}
+
+	.row {
+		margin: 0;
+	}
+
+	.card {
+		width: auto;
+		margin-bottom: 3%;
+	}
+
+	.about {
+		font-size: 1.5rem;
+		margin-top: 27%;
+		margin-left: -3%;
+		margin-bottom: 2%;
+	}
+
+	.headerBrand {
+		height: 40%;
+	}
+
+	.searchButton {
+		padding: 10%;
+		margin-left: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
