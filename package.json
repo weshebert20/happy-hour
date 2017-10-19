@@ -19,7 +19,12 @@
   "dependencies": {
     "ejs": "^2.5.7",
     "express": "^4.16.2",
-    "mongoose": "^4.12.1"
+    "handlebars": "^4.0.11",
+    "mongoose": "^4.12.1",
+    "node-foursquare": "^0.3.0",
+    "node-zomato": "^1.0.3",
+    "rapidapi-connect": "0.0.6",
+    "zomato": "^1.1.0"
   },
   "devDependencies": {},
   "keywords": [],
