@@ -38,7 +38,6 @@ app.use(express.static('public'));
 ////ROUTES////
 //////////////
 
-var results;
 
 
 var options = {
@@ -64,18 +63,16 @@ var find = function(object){
 	}
 };
 
-console.log(results);
-app.get("/", function(req, res){
+app.get("/results", function(req, res){
 	res.render('./views/home');
 });
 
-app.get("/results", function(req, res){
+app.get("/resultsSearch", function(req, res){
 	request(options, function(err, response, body){
 		if(!err && response.statusCode === 200) {
 			var respObj = JSON.parse(body);
 			var restaurants = respObj.restaurants;
 			var found = find(restaurants);
-			// findUserRating(restaurants);
 			res.send(found);
 
 		} else {
@@ -84,6 +81,9 @@ app.get("/results", function(req, res){
 	});
 });
 
+app.get('/', function(req, res){
+	res.render('./views/index');
+});
 
 
 
