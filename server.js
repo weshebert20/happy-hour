@@ -33,15 +33,16 @@ var db = require('./models');
 app.use(express.static('public'));
 
 
+
 //////////////
 ////ROUTES////
 //////////////
 
-
+var results;
 
 
 var options = {
-    url : "https://developers.zomato.com/api/v2.1/search?entity_id=305&count=10&lat=39.7494&lon=-104.9954",
+    url : "https://developers.zomato.com/api/v2.1/search?entity_id=305&count=10&lat=39.7344&lon=-104.9726",
     headers: {'user-key': '84d86141509866d80a7965697edb8965'},
     gzip:true
   };
@@ -52,30 +53,39 @@ var find = function(object){
 		return("Sorry");
 	} else {
 		var results = object.map(function(obj){
-        	var name = obj.restaurant.name;
-        	var rating = obj.restaurant.user_rating;
-        	var photo = obj.restaurant.thumb;
-        	console.log(name, rating, photo);
-
-	});  
-		app.get('/names', function(req, res){
-		res.render('./views/sample2.ejs');
-		console.log(results(name));
-    	});	
+			var restaurantModify = {
+	        	name : obj.restaurant.name,
+	        	rating : obj.restaurant.user_rating,
+	        	photo : obj.restaurant.thumb
+	        };
+	 		return (restaurantModify);
+    	}); 
+    	return(results);
 	}
 };
 
-request(options, function(err, response, body){
-	if(!err && response.statusCode === 200) {
-		var respObj = JSON.parse(body);
-		var restaurants = respObj.restaurants;
-		var found = find(restaurants);
-		// findUserRating(restaurants);
-	} else {
-		console.log(error);
-	} 
-	}
-);
+console.log(results);
+app.get("/", function(req, res){
+	res.render('./views/home');
+});
+
+app.get("/results", function(req, res){
+	request(options, function(err, response, body){
+		if(!err && response.statusCode === 200) {
+			var respObj = JSON.parse(body);
+			var restaurants = respObj.restaurants;
+			var found = find(restaurants);
+			// findUserRating(restaurants);
+			res.send(found);
+
+		} else {
+			console.log(error);
+		}
+	});
+});
+
+
+
 
 
 //////////////////////////////

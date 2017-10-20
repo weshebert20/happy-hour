@@ -9,7 +9,7 @@ body,
 
 /*background image styles*/
 .view {
-    background: url(../images/HH.jpeg)no-repeat center center fixed;
+    background: url(./images/HH.jpeg)no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -134,7 +134,7 @@ div.row.justify-content-center {
 /*header photo*/
 .headerBrand {
 	height: 60%;
-	background: url(../images/bar.jpeg)no-repeat center center fixed;
+	background: url(./images/bar.jpeg)no-repeat center center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
