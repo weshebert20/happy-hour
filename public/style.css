@@ -134,7 +134,7 @@ div.row.justify-content-center {
 /*header photo*/
 .headerBrand {
 	height: 50%;
-	background: url(./images/bar.jpeg)no-repeat center center fixed;
+	background: url(./images/bar.jpeg)no-repeat center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -194,6 +194,21 @@ div.row.justify-content-center {
 
 .card-link {
 	color:white;
+}
+
+.modalOptions {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+	display: block;
+}
+
+.modalBtn {
+	margin-top: 1rem;
+}
+
+.modalP {
+	margin: 0;
 }
 
 /*//home styles for phones*/

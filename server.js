@@ -96,8 +96,6 @@ app.get("/results", function(req, res){
 
 
 
-
-
 //////////////////////////////
 //get connected to localhost//
 //////////////////////////////
