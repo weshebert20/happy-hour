@@ -1,7 +1,6 @@
 <h1>HEY<h2>
 	<ul>
-		<li><%= found.name %></li>
-		<li></li>
-		<li></li>
-		<li></li>
+		<li><img src="<%= found[0].photo %>" alt=""></li>
+		<li><%= found[0].name%></li>
+		<li><h1>Rating: </h1><%= found[0].rating.aggregate_rating%></li>
 	</ul>

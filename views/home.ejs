@@ -34,12 +34,12 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <h1 class="row about col-md-10">Find your happy place...</h1>
-              <form class="form-inline">
+              <form class="form-inline" id="nameEnter">
   				      <div class="form-group">
   					     <div class="form-group mx-sm-3">
-    					     <input type="text" class="form-control" id="inputPassword2" placeholder="Enter name...">
+    					     <input type="text" method="GET" class="form-control" id="inputPassword2" placeholder="Enter name...">
   					     </div>
-  					     <button type="submit" class="btn searchButton btn-primary">Search</button>
+  					     <input type="submit" class="btn searchButton btn-primary">
 				      </form>
           </div>
         </div>
@@ -50,9 +50,10 @@
 		<div class="row">
 				<div class="card-deck">
   					<div class="card">
-  						<img class="card-img-top" src="../images/blue.jpg" alt="Card image cap">
+              <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
+  						<img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap">
   							<div class="card-block">
-    							<h4 class="card-title">Blue Sushi Sake Grill</h4>
+    							<h4 class="card-title"><%= found[0].name%></h4>
   							</div>
   							<ul class="list-group list-group-flush">
     							<li class="list-group-item hours">Hour(s) -								
@@ -60,7 +61,7 @@
           								<i class="fa fa-plus-circle" aria-hidden="true"></i>
         							</a>     								
      							</li>
-    							<li class="list-group-item rating">Foursquare Rating: </li>
+    							<li class="list-group-item rating">Rating: <%= found[0].rating.aggregate_rating%></li>
   							</ul>
   							<div class="card-block sites">
     							<a href="#" class="card-link">Website</a>
@@ -68,65 +69,62 @@
   							</div>
 							</div>
 							<div class="card">
-  								<img class="card-img-top" src="../images/hearth.jpg" alt="Card image cap">
-  							<div class="card-block">
-    							<h4 class="card-title">Hearth & Dram</h4>
-  							</div>
-  							<ul class="list-group list-group-flush">
-    							<li class="list-group-item hours">Hour(s) -
-    								
-        							<a href="#" data-toggle="popover" data-content="And here's some amazing content.">
-          								<i class="fa fa-plus-circle" aria-hidden="true"></i>
-        							</a>
-     								
-     							</li>
-    							<li class="list-group-item rating">Foursquare Rating: </li>
-  							</ul>
-  							<div class="card-block sites">
-    							<a href="#" class="card-link">Website</a>
-    							<a href="#" class="card-link">Directions</a>
-  							</div>
-							</div>
+              <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
+              <img class="card-img-top" src="<%= found[1].photo %>" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title"><%= found[1].name%></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item hours">Hour(s) -               
+                      <a href="#">
+                          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                      </a>                    
+                  </li>
+                  <li class="list-group-item rating">Rating: <%= found[1].rating.aggregate_rating%></li>
+                </ul>
+                <div class="card-block sites">
+                  <a href="#" class="card-link">Website</a>
+                  <a href="#" class="card-link">Directions</a>
+                </div>
+              </div>
 							<div class="card">
-  								<img class="card-img-top" src="../images/jax.jpg" alt="Card image cap">
-  							<div class="card-block">
-    							<h4 class="card-title">Jax Fish House</h4>
-  							</div>
-  							<ul class="list-group list-group-flush">
-    							<li class="list-group-item hours">Hour(s) -
-    								
-        							<a href="#">
-          								<i class="fa fa-plus-circle" aria-hidden="true"></i>
-        							</a>
-     								
-     							</li>
-    							<li class="list-group-item rating">Foursquare Rating: </li>
-  							</ul>
-  							<div class="card-block sites">
-    							<a href="#" class="card-link">Website</a>
-    							<a href="#" class="card-link">Directions</a>
-  							</div>
-							</div>
+              <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
+              <img class="card-img-top" src="<%= found[2].photo %>" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title"><%= found[2].name%></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item hours">Hour(s) -               
+                      <a href="#">
+                          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                      </a>                    
+                  </li>
+                  <li class="list-group-item rating">Rating: <%= found[2].rating.aggregate_rating%></li>
+                </ul>
+                <div class="card-block sites">
+                  <a href="#" class="card-link">Website</a>
+                  <a href="#" class="card-link">Directions</a>
+                </div>
+              </div>
 							<div class="card">
-  								<img class="card-img-top" src="../images/chop.jpg" alt="Card image cap">
-  							<div class="card-block">
-    							<h4 class="card-title">Denver ChopHouse</h4>
-  							</div>
-  							<ul class="list-group list-group-flush">
-    							<li class="list-group-item hours">Hour(s) -
-    								
-        							<a href="#">
-          								<i class="fa fa-plus-circle" aria-hidden="true"></i>
-        							</a>
-     								
-     							</li>
-    							<li class="list-group-item rating">Foursquare Rating: </li>
-  							</ul>
-  							<div class="card-block sites">
-    							<a href="#" class="card-link">Website</a>
-    							<a href="#" class="card-link">Directions</a>
-  							</div>
-						</div>
+              <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
+              <img class="card-img-top" src="<%= found[3].photo %>" alt="Card image cap">
+                <div class="card-block">
+                  <h4 class="card-title"><%= found[3].name%></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item hours">Hour(s) -               
+                      <a href="#">
+                          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                      </a>                    
+                  </li>
+                  <li class="list-group-item rating">Rating: <%= found[3].rating.aggregate_rating%></li>
+                </ul>
+                <div class="card-block sites">
+                  <a href="#" class="card-link">Website</a>
+                  <a href="#" class="card-link">Directions</a>
+                </div>
+              </div>
 			</div>
 		</div>
 	</div>

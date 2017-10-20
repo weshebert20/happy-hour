@@ -71,12 +71,12 @@ var find = function(object){
 };
 
 //home page
-app.get("/results", function(req, res){
-	res.render('./views/home');
-});
+// app.get("/results", function(req, res){
+// 	res.render('./views/home');
+// });
 
 //results search page
-app.get("/resultsSearch", function(req, res){
+app.get("/results", function(req, res){
 	request(options, function(err, response, body){
 		if(!err && response.statusCode === 200) {
 			//parses body
@@ -85,9 +85,8 @@ app.get("/resultsSearch", function(req, res){
 			var restaurants = respObj.restaurants;
 			//returns find function (name,rating,photo)
 			var found = find(restaurants);
-			console.log(found);
 			//renders on page
-			res.render('./views/resultsSearch', {found});
+			res.render('./views/home', {found});
 		} else {
 			console.log(error);
 		}
