@@ -13,7 +13,7 @@ $( document ).ready(function() {
 		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q='+ name + '&count=4&lat=39.7344&lon=-104.9726';
 
 		$.ajax({
-			type:'get',
+			type:'post',
 			url:'/resultsSearch',
 			data: {nameURL:nameURL}
 		});

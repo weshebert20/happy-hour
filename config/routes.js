@@ -40,7 +40,61 @@ router.get('/facebook', passport.authenticate('facebook'));
     // handle the callback after facebook has authenticated the user
 router.get('/facebook/callback',
   passport.authenticate('facebook', { successRedirect: '/results',
-                                      failureRedirect: '/login' }));
+                                      failureRedirect: '/login' 
+  }));
+
+
+///////////////////////
+//results search page//
+///////////////////////
+
+//function that gets name/rating/photo
+var find = function(object){
+  if (object.length === 0){
+    return("Sorry");
+  } else {
+    var results = object.map(function(obj){
+      var restaurantModify = {
+            name : obj.restaurant.name,
+            rating : obj.restaurant.user_rating,
+            photo : obj.restaurant.thumb
+          };
+      return (restaurantModify);
+      }); 
+      return(results);
+  }
+};
+
+router.post("/resultsSearch", function(req, res){
+
+  var name = req.body.nameURL;
+
+  ///////////
+  //KEY VAR//
+  ///////////
+
+  var options = {
+    url : "https://developers.zomato.com/api/v2.1/search?q=" + name + "&count=4&lat=39.7344&lon=-104.9726",
+    headers: {'user-key': '84d86141509866d80a7965697edb8965'},
+    gzip:true
+  };
+  console.log(options);
+
+  request(options, function(err, response, body){
+    if(!err && response.statusCode === 200) {
+      //parses body
+      var respObj = JSON.parse(body);
+      //returns restaurants in body
+      var restaurants = respObj.restaurants;
+      //returns find function (name,rating,photo)
+      var found = find(restaurants);
+      //renders on page
+      res.render('./views/home', {found});
+    } else {
+      console.log(error);
+    }
+  });
+});
           
 
 module.exports = router;
