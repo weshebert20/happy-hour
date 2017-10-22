@@ -13,6 +13,10 @@ router.get('/', function(req, res){
 	res.render('./views/login');
 });
 
+router.get('/results', function(req,res){
+	res.render('./views/home');
+});
+
 ///////////////
 //GOOGLE AUTH//
 ///////////////
