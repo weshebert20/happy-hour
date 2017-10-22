@@ -41,7 +41,7 @@ body,
   margin:0 auto;
   display:block;
   padding: 16px;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-name: fadeIn;
 }
 
@@ -72,6 +72,7 @@ body,
 	.sign-up {
 	margin-left:9%;
 	width:100%;
+	background-color: #8b9dc3;
 	}
 
 	.header_landing {

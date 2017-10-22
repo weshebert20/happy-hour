@@ -3,10 +3,14 @@
 ////////////////////////////
 
 const express = require('express');
+const authRoutes = require('./config/routes');
+const passportSetup = require('./config/passport');
 const app = express();
-var request = require('request');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
 var ejs = require('ejs');
 var path = require('path');
+var request = require('request');
 
 
 ///////////////
@@ -37,11 +41,20 @@ app.use(express.static('public'));
 ////ROUTES////
 //////////////
 
-//route to log-in page
-app.get('/', function(req, res){
-	res.render('./views/index');
-});
+//adding auth for google/facebook
+app.use('/auth' , authRoutes);
 
+//Get ALL those routes
+var routes = require(__dirname + '/config/routes');
+app.use('/', routes);
+
+
+
+// var name;
+// app.post('/test', function(req, res){
+// 	name = req.body.name;
+// 	console.log(name);
+// });
 
 ///////////
 //KEY VAR//
