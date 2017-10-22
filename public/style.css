@@ -155,6 +155,11 @@ div.row.justify-content-center {
 	padding: 3%;
 }
 
+.zip{
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+}
+
 /*card styles*/
 .cardNamePad {
 	padding:5%;

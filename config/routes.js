@@ -44,7 +44,7 @@ router.get('/facebook/callback',
   }));
 
 
-var getPhoto = 'https://s3.amazonaws.com/freehand/wp-content/uploads/sites/4/2016/07/19193438/RBT-dining-room.jpg';
+var getPhoto = 'https://i.pinimg.com/736x/11/54/89/11548944f15d77b5e948357024294490--bar-scene-nyc-restaurants.jpg';
 
 
 
@@ -85,7 +85,6 @@ router.post("/resultsSearch", function(req, res){
     headers: {'user-key': '84d86141509866d80a7965697edb8965'},
     gzip:true
   };
-  console.log(options);
 
   request(options, function(err, response, body){
     if(!err && response.statusCode === 200) {
@@ -95,7 +94,6 @@ router.post("/resultsSearch", function(req, res){
       var restaurants = respObj.restaurants;
       //returns find function (name,rating,photo)
       var found = find(restaurants);
-      console.log(found);
       //renders on page
       res.render('./views/homeSearch', {found});
     } else {
