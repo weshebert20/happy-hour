@@ -65,8 +65,10 @@ var find = function(object){
   }
 };
 
+
 router.post("/resultsSearch", function(req, res){
 
+  //get searched name from script.js (front-end)
   var name = req.body.nameURL;
 
   ///////////
@@ -74,7 +76,7 @@ router.post("/resultsSearch", function(req, res){
   ///////////
 
   var options = {
-    url : "https://developers.zomato.com/api/v2.1/search?q=" + name + "&count=4&lat=39.7344&lon=-104.9726",
+    url : name,
     headers: {'user-key': '84d86141509866d80a7965697edb8965'},
     gzip:true
   };
