@@ -28,7 +28,7 @@ router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   function(req, res) {
     // Authenticated successfully
-    res.redirect('/resultsSearch');
+    res.redirect('/results');
   });
 
 /////////////////
@@ -39,7 +39,7 @@ router.get('/facebook', passport.authenticate('facebook'));
 
     // handle the callback after facebook has authenticated the user
 router.get('/facebook/callback',
-  passport.authenticate('facebook', { successRedirect: '/resultsSearch',
+  passport.authenticate('facebook', { successRedirect: '/results',
                                       failureRedirect: '/login' }));
           
 

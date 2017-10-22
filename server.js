@@ -49,21 +49,16 @@ var routes = require(__dirname + '/config/routes');
 app.use('/', routes);
 
 
-app.post('/test', function(req, res){
-	var name = req.body.name;
-	console.log(name);
- });
+
+// app.post('/test', function(req, res){
+// 	var name = req.body.nameURL;
+// 	console.log(name);
+//  });
 
 
-///////////
-//KEY VAR//
-///////////
 
-var options = {
-    url : "https://developers.zomato.com/api/v2.1/search?count=4&lat=39.7344&lon=-104.9726",
-    headers: {'user-key': '84d86141509866d80a7965697edb8965'},
-    gzip:true
-  };
+
+
  
 
 //function that gets name/rating/photo
@@ -85,6 +80,20 @@ var find = function(object){
 
 //results search page
 app.get("/resultsSearch", function(req, res){
+
+	var name = req.body.nameURL;
+
+	///////////
+	//KEY VAR//
+	///////////
+
+	var options = {
+    url : "https://developers.zomato.com/api/v2.1/search?q=" + name + "&count=4&lat=39.7344&lon=-104.9726",
+    headers: {'user-key': '84d86141509866d80a7965697edb8965'},
+    gzip:true
+  };
+  console.log(options);
+
 	request(options, function(err, response, body){
 		if(!err && response.statusCode === 200) {
 			//parses body
