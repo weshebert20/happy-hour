@@ -21,31 +21,26 @@ router.get('/results', function(req,res){
 //GOOGLE AUTH//
 ///////////////
 
-router.get('/google', passport.authenticate('google', {
-	scope: ['profile', 'email']
-}));
+router.get('/google',
+  passport.authenticate('google', { scope: ['email profile'] }));
 
 router.get('/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login' }),
+  passport.authenticate('google', { failureRedirect: '/' }),
   function(req, res) {
-    res.redirect('/results');
-});
+    // Authenticated successfully
+    res.redirect('/resultsSearch');
+  });
 
 /////////////////
 //FACEBOOK AUTH//
 /////////////////
 
-router.get('/facebook',
-  passport.authenticate('facebook'),
-  function(req, res){});
+router.get('/facebook', passport.authenticate('facebook'));
 
-
-router.get('/facebook/callback', 
-	passport.authenticate('facebook', { failureRedirect: '/login' }),
-	function (req, res) {
-		res.redirect('/results');
-});
-
-
+    // handle the callback after facebook has authenticated the user
+router.get('/facebook/callback',
+  passport.authenticate('facebook', { successRedirect: '/resultsSearch',
+                                      failureRedirect: '/login' }));
+          
 
 module.exports = router;
