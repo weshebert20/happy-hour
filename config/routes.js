@@ -44,6 +44,10 @@ router.get('/facebook/callback',
   }));
 
 
+var getPhoto = 'https://s3.amazonaws.com/freehand/wp-content/uploads/sites/4/2016/07/19193438/RBT-dining-room.jpg';
+
+
+
 ///////////////////////
 //results search page//
 ///////////////////////
@@ -53,11 +57,12 @@ var find = function(object){
   if (object.length === 0){
     return("Sorry");
   } else {
+
     var results = object.map(function(obj){
       var restaurantModify = {
             name : obj.restaurant.name,
             rating : obj.restaurant.user_rating,
-            photo : obj.restaurant.thumb
+            photo : obj.restaurant.thumb || getPhoto
           };
       return (restaurantModify);
       }); 
@@ -90,8 +95,9 @@ router.post("/resultsSearch", function(req, res){
       var restaurants = respObj.restaurants;
       //returns find function (name,rating,photo)
       var found = find(restaurants);
+      console.log(found);
       //renders on page
-      res.render('./views/home', {found});
+      res.render('./views/homeSearch', {found});
     } else {
       console.log(error);
     }

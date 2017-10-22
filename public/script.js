@@ -10,12 +10,15 @@ $( document ).ready(function() {
 
 		
 		// add name searched value to URL
-		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q='+ name + '&count=4&lat=39.7344&lon=-104.9726';
+		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q=' + name + '&count=4&lat=39.7344&lon=-104.9726&radius=100000';
 
 		$.ajax({
 			type:'post',
 			url:'/resultsSearch',
-			data: {nameURL:nameURL}
+			data: {nameURL:nameURL},
+			success: function(backend){
+				$('body').html(backend);
+			}
 		});
 	});
 });

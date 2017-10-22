@@ -156,6 +156,11 @@ div.row.justify-content-center {
 }
 
 /*card styles*/
+.cardNamePad {
+	padding:5%;
+	max-height: 15%;
+}
+
 .card {
 	width: 25rem;
 	-webkit-box-shadow: -8px -9px 59px -17px rgba(0,0,0,0.39);
@@ -175,7 +180,6 @@ div.row.justify-content-center {
 	padding: 2%;
 	font-weight: bold;
 	text-align: center;
-	margin-top: .7rem;
 }
 
 .hours {
