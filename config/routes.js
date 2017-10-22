@@ -62,7 +62,8 @@ var find = function(object){
       var restaurantModify = {
             name : obj.restaurant.name,
             rating : obj.restaurant.user_rating,
-            photo : obj.restaurant.thumb || getPhoto
+            photo : obj.restaurant.thumb || getPhoto,
+            url : obj.restaurant.url
           };
       return (restaurantModify);
       }); 

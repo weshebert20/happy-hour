@@ -162,8 +162,13 @@ div.row.justify-content-center {
 
 /*card styles*/
 .cardNamePad {
-	padding:5%;
-	max-height: 15%;
+	padding:3%;
+	max-height: 13%;
+}
+
+.card-deck .card {
+	margin-right: 2px;
+	margin-left: 2px;
 }
 
 .card {
