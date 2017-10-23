@@ -118,12 +118,33 @@ div.row.justify-content-center {
 /***********/
 
 /*navigation*/
+h1 {
+	text-align: center;
+}
+
 #mainNav {
 	color: white;
 }
 
 .navColor {
 	background: rgba(43, 43, 43, 0.5);
+}
+
+/*header about and search bar*/
+.about {
+	color: white;
+	margin-top: 24%;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 200;
+	font-size: 4rem;
+}
+
+#nameEnter {
+	text-align: center;
+}
+
+#mainPageCenter {
+	text-align: center;
 }
 
 .brand-name {
@@ -134,7 +155,8 @@ div.row.justify-content-center {
 
 /*header photo*/
 .headerBrand {
-	height: 50%;
+	height: 100%;
+	text-align: center;
 	background: url(./images/bar.jpeg)no-repeat center fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
@@ -142,17 +164,14 @@ div.row.justify-content-center {
     background-size: cover;
 }
 
-
-/*header about and search bar*/
-.about {
-	color: white;
-	margin-top: 20%;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 100;
+.searchButton {
+	padding: .9rem;
+	display: inline-block;
+	margin-bottom: 2px;
 }
 
-.searchButton {
-	padding: 3%;
+.form-group {
+	display: initial;
 }
 
 .zip{
@@ -160,50 +179,44 @@ div.row.justify-content-center {
 	font-family: 'Open Sans', sans-serif;
 }
 
+#inputName {
+	width:20%;
+	display: inline-block;
+	height: 3.3rem !important;
+}
+
 /*card styles*/
 .cardNamePad {
 	padding:3%;
-	max-height: 13%;
+	max-height: 12%;
+	margin-top: 3%;
 }
 
 .card-deck .card {
-	margin-right: 2px;
-	margin-left: 2px;
+	margin-right: 4px;
+	margin-left: 4px;
 }
 
 .card {
 	width: 25rem;
-	-webkit-box-shadow: -8px -9px 59px -17px rgba(0,0,0,0.39);
-	-moz-box-shadow: -8px -9px 59px -17px rgba(0,0,0,0.39);
-	box-shadow: -8px -9px 59px -17px rgba(0,0,0,0.39);
 }
 
 .card-deck {
-	margin-top: 3%;
+	margin-top: 4%;
 	margin-bottom: 3%;
 }
 
 .card-title {
 	font-family: 'Ovo', serif;
-	font-size: 1.5rem; 
-	text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+	font-size: 1.15rem; 
 	padding: 2%;
 	font-weight: bold;
 	text-align: center;
 }
 
-.hours {
-	font-weight: bold;
-}
-
-.rating {
-	font-weight: bold;
-	color: #3160DF;
-}
-
 .sites {
 	text-align: center;
-	padding: 3%;
+	padding: 6%;
 	background-color: #5cb85c;
 }
 

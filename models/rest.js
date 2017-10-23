@@ -5,7 +5,8 @@ var RestaurantSchema = new Schema({
 	restaurants:[{
 		name: String,
 		user_rating: {},
-		thumb: String
+		thumb: String,
+		
 	}]
 });
 
