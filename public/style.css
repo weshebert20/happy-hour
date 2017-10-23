@@ -250,73 +250,89 @@ h1 {
 
 /*//home styles for phones*/
 @media (max-width: 359px) {
-	#mainNav {
-		height: 8%;
+	* {
+		box-sizing: inherit;
+	}
+
+	.minOption {
+		display: block;
+	}
+
+	.container {
+		padding: 0;
 	}
 
 	.row {
 		margin: 0;
 	}
 
-	.card {
+	.card-deck .card {
+		margin: 0;
 		width: auto;
-		margin-bottom: 3%;
-	}
-
-	.card-deck {
-		width: 100%;
 	}
 
 	.about {
-		font-size: 1rem;
-		margin-top: 27%;
+		font-size: 1.5rem;
+		margin-top: 40%;
 		margin-left: -3%;
 		margin-bottom: 2%;
 	}
 
 	.headerBrand {
-		height: 40%;
+		height: 100%;
+	}
+
+	#inputName {
+		width: 100%;
 	}
 
 	.searchButton {
 		padding: 7%;
-		margin-left: 0;
+		margin-top: 7%;
 	}
 }
 
 
 @media (min-width: 360px) and (max-width: 767px) {
-	#mainNav {
-		height: 8%;
+	* {
+		box-sizing: inherit;
+	}
+
+	.minOption {
+		display: block;
+	}
+
+	.container {
+		padding: 0;
 	}
 
 	.row {
 		margin: 0;
 	}
 
-	.card {
+	.card-deck .card {
+		margin: 0;
 		width: auto;
-		margin-bottom: 3%;
-	}
-
-	.card-deck {
-		width: 100%;
 	}
 
 	.about {
 		font-size: 1.5rem;
-		margin-top: 27%;
+		margin-top: 40%;
 		margin-left: -3%;
 		margin-bottom: 2%;
 	}
 
 	.headerBrand {
-		height: 40%;
+		height: 100%;
+	}
+
+	#inputName {
+		width: 100%;
 	}
 
 	.searchButton {
-		padding: 10%;
-		margin-left: 0;
+		padding: 7%;
+		margin-top: 7%;
 	}
 }
 
