@@ -18,6 +18,11 @@ $( document ).ready(function() {
 		});
 	});
 
+	var cards = $('.card').length;
+
+	
+	
+
 	//scroll down on submit
 	$("#buttonChange").click(function() {
     	$('html,body').delay(800).animate({
@@ -25,6 +30,7 @@ $( document ).ready(function() {
         	'slow');
 	});
 
+	
 	$('.hoursTime').on('click', function(){
 		event.preventDefault();
 		console.log('HEY');
@@ -33,7 +39,9 @@ $( document ).ready(function() {
 		var hoursEnd = $('#hoursTo').val();
 		console.log(hoursEnd);
 
-		$('.madeHours').append(hoursStart + " to " + hoursEnd);
+
+		for (let i = 0; i < 1; i++){
+		$('.clicked'+ [i]).append(hoursStart + " to " + hoursEnd);
 		// $.ajax({
 		// 	type:'put',
 		// 	url:'/resultsSearch',
@@ -43,13 +51,12 @@ $( document ).ready(function() {
 		// 	}
 		// });
 
-		// $('i').addClass('removePlus');
-	});
+	}
+});
 
 	$('.hoursTime').on('click', function(){
 		event.preventDefault();
 		$("form").attr('data-dismiss', 'modal');
-		// $('.removePlus').remove();
 	});
 
 

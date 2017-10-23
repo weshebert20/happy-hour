@@ -37,7 +37,10 @@
                             </div>
                           </div>
                       </a>   
-                      <p class="madeHours"></p>                 
+                  
+
+                      <p class="madeHours clicked<%=[i]%> "><% found[i].hours %></p>  
+                  
                   </li>
                   <li class="list-group-item rating">Rating: <%= found[i].rating.aggregate_rating%></li>
                 </ul>
@@ -48,17 +51,6 @@
               </div>
               <% } %>
               
-
-
-
-
-
-
-
-
-
-
-
   
   <!-- bootstrap set up -->
 
