@@ -70,14 +70,15 @@
                                           <option value="2">4</option>
                                           <option value="3">5</option>
                                         </select>
-                                        <p class="">To</p>
+                                        <p class="timeP">To</p>
                                         <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
                                           <option selected>Choose...</option>
                                           <option value="1">6</option>
                                           <option value="2">7</option>
                                           <option value="3">8</option>
                                         </select>
-                                        <input type="submit" class="btn btn-primary modalBtn">
+                                        <input type="submit" 
+                                       id="hours" class="btn btn-primary hoursTime">
                                   </form>
                               </div>
                             </div>
@@ -87,8 +88,8 @@
                   <li class="list-group-item rating">Rating: <%= found[0].rating.aggregate_rating%></li>
                 </ul>
                 <div class="card-block sites">
-                  <a href=<%= found[0].url%> class="card-link">Website</a>
-                  <a href="#" class="card-link">Directions</a>
+                  <a target="_blank" href=<%= found[0].url%> class="card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[0].name%>" class="card-link">Directions</a>
                 </div>
               </div>
               <div class="card">
@@ -106,8 +107,8 @@
                   <li class="list-group-item rating">Rating: <%= found[1].rating.aggregate_rating%></li>
                 </ul>
                 <div class="card-block sites">
-                  <a href="#" class="card-link">Website</a>
-                  <a href="#" class="card-link">Directions</a>
+                  <a target="_blank" href=<%= found[1].url%> class="card-link" >Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[1].name%>"class="card-link">Directions</a>
                 </div>
               </div>
               <div class="card">
@@ -125,8 +126,8 @@
                   <li class="list-group-item rating">Rating: <%= found[2].rating.aggregate_rating%></li>
                 </ul>
                 <div class="card-block sites">
-                  <a href="#" class="card-link">Website</a>
-                  <a href="#" class="card-link">Directions</a>
+                  <a target="_blank" href=<%= found[2].url%> class="card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[2].name%>"class="card-link">Directions</a>
                 </div>
               </div>
               <div class="card">
@@ -144,8 +145,8 @@
                   <li class="list-group-item rating">Rating: <%= found[3].rating.aggregate_rating%></li>
                 </ul>
                 <div class="card-block sites">
-                  <a href="#" class="card-link">Website</a>
-                  <a href="#" class="card-link">Directions</a>
+                  <a target="_blank" href=<%= found[3].url%> class="card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[3].name%>" class="card-link">Directions</a>
                 </div>
               </div>
       </div>
@@ -153,6 +154,109 @@
   </div>
 
 
+  <div class="container">
+    <div class="row">
+        <div class="card-deck">
+            <div class="card">
+              <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
+              <img class="card-img-top" src="<%= found[4].photo %>" alt="Card image cap">
+                <div class="card-block cardNamePad">
+                  <h4 class="card-title"><%= found[4].name%></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item hours">Hour(s) -               
+                      <a href="#">
+                          <i class="fa fa-plus-circle" data-toggle="modal" data-target=".bd-example-modal-sm" aria-hidden="true"></i>
+                          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm">
+                              <div class="modal-content">
+                                  <form action="" class="modalOptions">
+                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                          <option selected>Choose...</option>
+                                          <option value="1">3</option>
+                                          <option value="2">4</option>
+                                          <option value="3">5</option>
+                                        </select>
+                                        <p class="">To</p>
+                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                          <option selected>Choose...</option>
+                                          <option value="1">6</option>
+                                          <option value="2">7</option>
+                                          <option value="3">8</option>
+                                        </select>
+                                        <input type="submit" class="btn btn-primary modalBtn">
+                                  </form>
+                              </div>
+                            </div>
+                          </div>
+                      </a>                    
+                  </li>
+                  <li class="list-group-item rating">Rating: <%= found[4].rating.aggregate_rating%></li>
+                </ul>
+                <div class="card-block sites">
+                  <a target="_blank" href=<%= found[4].url%> class="card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[4].name%>" class="card-link">Directions</a>
+                </div>
+              </div>
+              <div class="card">
+              <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
+              <img class="card-img-top" src="<%= found[5].photo %>" alt="Card image cap">
+                <div class="card-block cardNamePad">
+                  <h4 class="card-title"><%= found[5].name%></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item hours">Hour(s) -               
+                      <a href="#">
+                          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                      </a>                    
+                  </li>
+                  <li class="list-group-item rating">Rating: <%= found[5].rating.aggregate_rating%></li>
+                </ul>
+                <div class="card-block sites">
+                  <a target="_blank" href=<%= found[5].url%> class="card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[5].name%>" class="card-link">Directions</a>
+                </div>
+              </div>
+              <div class="card">
+              <img class="card-img-top" src="<%= found[6].photo %>" alt="Card image cap">
+                <div class="card-block cardNamePad">
+                  <h4 class="card-title"><%= found[6].name%></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item hours">Hour(s) -               
+                      <a href="#">
+                          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                      </a>                    
+                  </li>
+                  <li class="list-group-item rating">Rating: <%= found[6].rating.aggregate_rating%></li>
+                </ul>
+                <div class="card-block sites">
+                  <a target="_blank" href=<%= found[6].url%> class="card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[6].name%>" class="card-link">Directions</a>
+                </div>
+              </div>
+              <div class="card">
+              <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
+              <img class="card-img-top" src="<%= found[7].photo %>" alt="Card image cap">
+                <div class="card-block cardNamePad">
+                  <h4 class="card-title"><%= found[7].name%></h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item hours">Hour(s) -               
+                      <a href="#">
+                          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                      </a>                    
+                  </li>
+                  <li class="list-group-item rating">Rating: <%= found[7].rating.aggregate_rating%></li>
+                </ul>
+                <div class="card-block sites">
+                  <a target="_blank" href=<%= found[7].url%> class="card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[7].name%>" class="card-link">Directions</a>
+                </div>
+              </div>
+      </div>
+    </div>
+  </div>
 
 
 

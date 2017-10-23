@@ -212,8 +212,8 @@ div.row.justify-content-center {
 }
 
 .modalOptions {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	text-align: center;
 	display: block;
 }
@@ -224,6 +224,15 @@ div.row.justify-content-center {
 
 .modalP {
 	margin: 0;
+}
+
+.timeP {
+	margin: 0;
+}
+
+.hoursTime {
+	padding: 2%;
+	margin-top: 3%;
 }
 
 /*//home styles for phones*/
