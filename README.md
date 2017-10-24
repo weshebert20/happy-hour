@@ -8,7 +8,7 @@ https://github.com/weshebert20/happy-hour
 ## Trello Board
 
 Link to trello board:
-https://trello.com/b/639kxsCBxx
+https://trello.com/b/1bfhJuAf/happy-hours
 
 ## Wireframe Login Page
 
@@ -61,3 +61,11 @@ I used the views folder to store my EJS files, my models were the user which I u
 The biggest challenge I ran into was getting the information the user searched on the front-end into my back end URL. As said before the URL could not include the "key" to had to be stored in a "header" with the URL I wanted to search with what the user put in. It created a process of front-end->back-end->externalAPI->back-end->front end with results. All while dealing with that URL/Key issue above. I ended up creating a function that found the object params I wanted and stored them, then added that function to the post request.
 
 My other big challenge was making a for loop in the ejs file that went created the board under the search with live information. Once I figured it out it all made sense, it just took me awhile to get there. I basically had to add ejs IDs to every element on the card deck.
+
+### More to come
+
+1.) Set up the log-out button
+2.) when a user saves or deletes create a modal that lets the user know its saved or deleted
+3.) have the page search my database before resorting the oter API if I already have the id information 
+4.) add a put if it is demanded of me
+5.) make mocha test
