@@ -115,6 +115,113 @@ $( document ).ready(function() {
 		});
 	});
 
+	$(".clickDel"+[0]).on('click', function() {
+		var id = $('.idNum'+[0]).html();
+		var name = $('.resName'+[0]).html();
+		var hour = $('.clicked0').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+
+	$(".clickDel"+[1]).on('click', function() {
+		var id = $('.idNum'+[1]).html();
+		var name = $('.resName'+[1]).html();
+		var hour = $('.clicked1').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+	$(".clickDel"+[2]).on('click', function() {
+		var id = $('.idNum'+[2]).html();
+		var name = $('.resName'+[2]).html();
+		var hour = $('.clicked2').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+	$(".clickDel"+[3]).on('click', function() {
+		var id = $('.idNum'+[3]).html();
+		var name = $('.resName'+[3]).html();
+		var hour = $('.clicked3').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+	$(".clickDel"+[4]).on('click', function() {
+		var id = $('.idNum'+[4]).html();
+		var name = $('.resName'+[4]).html();
+		var hour = $('.clicked4').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+	$(".clickDel"+[5]).on('click', function() {
+		var id = $('.idNum'+[5]).html();
+		var name = $('.resName'+[5]).html();
+		var hour = $('.clicked5').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+	$(".clickDel"+[6]).on('click', function() {
+		var id = $('.idNum'+[6]).html();
+		var name = $('.resName'+[6]).html();
+		var hour = $('.clicked6').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+	$(".clickDel"+[7]).on('click', function() {
+		var id = $('.idNum'+[7]).html();
+		var name = $('.resName'+[7]).html();
+		var hour = $('.clicked7').html();
+
+    	$.ajax({
+      		method: 'DELETE',
+      		url: '/hourTimes/Delete',
+      		data: {id:id, name:name, hour:hour},
+      		success: "YAY",
+      		error: "Booo"
+    	});
+  });
+
+
 	var cards = $('.card').length;
 	
 

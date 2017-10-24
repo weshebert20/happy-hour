@@ -46,6 +46,16 @@ router.post('/hourTimes', function(req, res){
   //make a res.send
 
 
+router.delete('/hourTimes/Delete', function (req, res) {
+  // get book id from url params (`req.params`)
+  console.log('rest deleted', req.params);
+  var restId = req.body.id;
+  // find the index of the book we want to remove
+  db.Restaurant.findOneAndRemove({ _id: restId }, function (err, deletedRest) {
+    res.json(deletedRest);
+  });
+});
+
 ///////////////
 //GOOGLE AUTH//
 ///////////////

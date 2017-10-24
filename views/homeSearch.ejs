@@ -47,13 +47,17 @@
                       </a>
                       <!-- modal end and hours/website begin -->   
                       <p class="madeHours clicked<%=[i]%> "><% found[i].hours %></p> 
-                      <button type="submit" class="btn saveB saveBtn<%=[i]%> btn-danger">Save</button>
+                      <button type="submit" class="btn clickDel<%=[i]%> saveB btn-danger">Delete</button>
                   </li>
                   <li class="list-group-item rating">Rating: <%= found[i].rating.aggregate_rating%></li>
                 </ul>
                 <div class="card-block sites">
                   <a target="_blank" href=<%= found[i].url%> class="card-link">Website</a>
                   <a target="_blank" href="http://maps.google.com/?q= + <%= found[0].name%>" class="card-link">Directions</a>
+                </div>
+                <div>
+                <button type="submit" class="btn deleteMe saveBtn<%=[i]%> btnLog">Save</button>
+                  
                 </div>
               </div>
               <% } %>
