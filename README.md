@@ -13,12 +13,12 @@ https://trello.com/b/639kxsCBxx
 ## Wireframe Login Page
 
 Landing page:
-![Screenshot](./Page_1.png)
+![Screenshot](./wireframe/Page_1.png)
 
 ## Wireframe Home Page
 
 Game page:
-![Screenshot](./Page_2.png)
+![Screenshot](./wireframe/Page_2.png)
 
 
 
