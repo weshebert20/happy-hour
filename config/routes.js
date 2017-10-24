@@ -8,6 +8,11 @@ var ejs = require('ejs');
 router.use(passport.initialize());
 router.use(passport.session());
 
+
+//connect db with routes
+var db = require('../models');
+
+
 // route to log-in page
 router.get('/', function(req, res){
 	res.render('./views/login');
@@ -16,6 +21,30 @@ router.get('/', function(req, res){
 router.get('/results', function(req,res){
 	res.render('./views/home');
 });
+
+router.post('/hourTimes', function(req, res){
+
+  var newRest = new db.Restaurant({
+    _id: req.body.id,
+    name: req.body.name,
+    hour: req.body.hour,
+  });
+
+  newRest.save(function(err, rest){
+    if (err) {
+        return console.log("save error: " + err);
+      }
+      console.log("saved ", rest.name);
+      // send back the book!
+      res.send(rest);
+    });
+});
+  //get req.body from ajax
+  //make a db.find statment to see if it exist
+  //if it doesnt exist...db.create new one
+  //if it does exist be done
+  //make a res.send
+
 
 ///////////////
 //GOOGLE AUTH//
@@ -60,6 +89,7 @@ var find = function(object){
 
     var results = object.map(function(obj){
       var restaurantModify = {
+            _id: obj.restaurant.id,
             name : obj.restaurant.name,
             rating : obj.restaurant.user_rating,
             photo : obj.restaurant.thumb || getPhoto,

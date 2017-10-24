@@ -18,9 +18,104 @@ $( document ).ready(function() {
 		});
 	});
 
-	var cards = $('.card').length;
+	$('.saveBtn'+[0]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[0]).html();
+		var name = $('.resName'+[0]).html();
+		var hour = $('.clicked0').html();
 
-	//on click pull out id, drop into modal (input type=hidden)
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+	$('.saveBtn'+[1]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[1]).html();
+		var name = $('.resName'+[1]).html();
+		var hour = $('.clicked1').html();
+
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+	$('.saveBtn'+[2]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[2]).html();
+		var name = $('.resName'+[2]).html();
+		var hour = $('.clicked2').html();
+
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+	$('.saveBtn'+[3]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[3]).html();
+		var name = $('.resName'+[3]).html();
+		var hour = $('.clicked3').html();
+
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+	$('.saveBtn'+[4]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[4]).html();
+		var name = $('.resName'+[4]).html();
+		var hour = $('.clicked4').html();
+
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+	$('.saveBtn'+[5]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[5]).html();
+		var name = $('.resName'+[5]).html();
+		var hour = $('.clicked5').html();
+
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+	$('.saveBtn'+[6]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[6]).html();
+		var name = $('.resName'+[6]).html();
+		var hour = $('.clicked6').html();
+
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+	$('.saveBtn'+[7]).on('click', function(){
+		event.preventDefault();
+		var id = $('.idNum'+[7]).html();
+		var name = $('.resName'+[7]).html();
+		var hour = $('.clicked7').html();
+
+		$.ajax({
+			type:'post',
+			url:'/hourTimes',
+			data: {id:id, name:name, hour:hour}
+		});
+	});
+
+	var cards = $('.card').length;
 	
 
 	//scroll down on submit

@@ -31,7 +31,7 @@ app.engine('ejs', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 //connect to db models//
-var db = require('./models');
+// var db = require('./models');
 
 //serve static files in public//
 app.use(express.static('public'));

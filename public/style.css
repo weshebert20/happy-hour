@@ -196,7 +196,7 @@ h1 {
 	margin-right: 4px;
 	margin-left: 4px;
 	max-width: 24%;
-	flex: 1 20% !important; 
+	flex: 1 20%; 
 }
 
 .card {
@@ -241,11 +241,7 @@ body .modal-open {
 	margin-top: 1rem;
 }
 
-.modalP {
-	margin: 0;
-}
-
-.timeP {
+.modalP .timeP{
 	margin: 0;
 }
 
@@ -262,11 +258,16 @@ body .modal-open {
 	font-size: .9rem;
 }
 
-.saveBtn {
+.saveB {
 	padding: 2%;
 	display: inline;
 	font-size: .5rem;
 }
+
+.idnums {
+	display: none;
+}
+
 
 /*//home styles for phones*/
 @media (max-width: 359px) {
@@ -289,6 +290,7 @@ body .modal-open {
 	.card-deck .card {
 		margin: 0;
 		width: auto;
+		max-width: inherit;
 	}
 
 	.about {
@@ -333,6 +335,7 @@ body .modal-open {
 	.card-deck .card {
 		margin: 0;
 		width: auto;
+		max-width: inherit;
 	}
 
 	.about {

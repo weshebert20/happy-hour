@@ -12,7 +12,8 @@
               <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
               <img class="card-img-top" src="<%= found[i].photo %>" alt="Card image cap">
                 <div class="card-block cardNamePad">
-                  <h4 class="card-title"><%= found[i].name%></h4>
+                  <h4 class="card-title resName<%=[i]%>"><%= found[i].name%></h4>
+                  <p class="idnums idNum<%=[i]%>"><%= found[i]._id%> </p>
                 </div>
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item hours">Hour(s)- 
@@ -46,7 +47,7 @@
                       </a>
                       <!-- modal end and hours/website begin -->   
                       <p class="madeHours clicked<%=[i]%> "><% found[i].hours %></p> 
-                      <button type="button" class="btn saveBtn btn-danger">Save</button>
+                      <button type="submit" class="btn saveB saveBtn<%=[i]%> btn-danger">Save</button>
                   </li>
                   <li class="list-group-item rating">Rating: <%= found[i].rating.aggregate_rating%></li>
                 </ul>
