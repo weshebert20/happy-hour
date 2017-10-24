@@ -17,16 +17,18 @@ Landing page:
 
 ## Wireframe Home Page
 
-Game page:
+Home Page:
 ![Screenshot](./wireframe/Page_2.png)
 
 
 
-## Idea
+## IDEA
 
 Ultimately the idea is to have an app that users can come to to quickly see a places happy hour hours. I find that a lot of time when I am looking for a happy hour around me I struggle finding the information I need I have to jump through hoops. The goal is for restaurant owners to be able to log in to update their hours.
 
-## Technology 
+From my wireframes I ended up diverting from the map idea and instead of using googleplaces API I went with ZOMATO. So now the user can search zipcode if they want to find places around their area or use a specific restaurant selection and it will pull up the closest options
+
+## TECHNOLOGY USED
 
 ### Installation
 
@@ -56,7 +58,7 @@ I used jquery on the front end to to make AJAX calls when needed. I also used it
 
 I used the views folder to store my EJS files, my models were the user which I used Facebook and Google with passport to authorize the user. I also had a Restaurant model to store the information from the external API when user pressed save to my database on MONGO. 
 
-### Challenges
+### CHALLENGES
 
 The biggest challenge I ran into was getting the information the user searched on the front-end into my back end URL. As said before the URL could not include the "key" to had to be stored in a "header" with the URL I wanted to search with what the user put in. It created a process of front-end->back-end->externalAPI->back-end->front end with results. All while dealing with that URL/Key issue above. I ended up creating a function that found the object params I wanted and stored them, then added that function to the post request.
 
