@@ -72,6 +72,11 @@ body,
 	}
 
 	.log-in {
+	background-color: #3cc57c;
+	margin-right: 0;
+}
+
+/*	.log-in {
 	margin-left:9%;
 	width: 100%;
 	margin-right: 0;
@@ -82,7 +87,7 @@ body,
 	margin-left:9%;
 	width:100%;
 	background-color: #8b9dc3;
-	}
+	}*/
 
 	.header_landing {
 		padding-top: 20%;
@@ -102,17 +107,15 @@ div.row.justify-content-center {
 	}
 
 	.log-in {
-	margin-left:8%;
-	width: 100%;
+	background-color: #3cc57c;
 	margin-right: 0;
-	margin-bottom: 3%;
-	}	
+}
 
-	.sign-up {
+/*	.sign-up {
 	margin-left:8%;
 	width:100%;
 	}
-
+*/
 	.header_landing {
 		padding-top: 27%;
 	}
@@ -313,7 +316,6 @@ body .modal-open {
 	}
 
 	.about {
-		font-size: 1.5rem;
 		margin-top: 40%;
 		margin-left: -3%;
 		margin-bottom: 2%;
@@ -358,7 +360,6 @@ body .modal-open {
 	}
 
 	.about {
-		font-size: 1.5rem;
 		margin-top: 40%;
 		margin-left: -3%;
 		margin-bottom: 2%;
