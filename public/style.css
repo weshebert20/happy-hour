@@ -258,6 +258,16 @@ body .modal-open {
 	margin-top: 3%;
 }
 
+.list-group-flush .list-group-item {
+	font-size: .9rem;
+}
+
+.saveBtn {
+	padding: 2%;
+	display: inline;
+	font-size: .5rem;
+}
+
 /*//home styles for phones*/
 @media (max-width: 359px) {
 	* {

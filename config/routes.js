@@ -37,7 +37,7 @@ router.get('/google/callback',
 
 router.get('/facebook', passport.authenticate('facebook'));
 
-    // handle the callback after facebook has authenticated the user
+// handle the callback after facebook has authenticated the user
 router.get('/facebook/callback',
   passport.authenticate('facebook', { successRedirect: '/results',
                                       failureRedirect: '/login' 

@@ -4,9 +4,10 @@ var mongoose = require('mongoose'),
 var RestaurantSchema = new Schema({
 	restaurants:[{
 		name: String,
-		user_rating: {},
-		thumb: String,
-		
+		rating: {},
+		photo: String,
+		utl: String,
+		hours: String
 	}]
 });
 

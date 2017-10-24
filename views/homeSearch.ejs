@@ -1,46 +1,52 @@
+  <!-- searched portion -->
+
   <div class="container">
     <div class="row minOption">
       <div id="bodySecond">
         <div class="card-deck">
+          <!-- begin card deck and loop through -->
+
           <% for(var i=0; i < found.length; i++) { %>
             <div class="card">
+
               <!-- <img class="card-img-top" src="<%= found[0].photo %>" alt="Card image cap"> -->
               <img class="card-img-top" src="<%= found[i].photo %>" alt="Card image cap">
                 <div class="card-block cardNamePad">
                   <h4 class="card-title"><%= found[i].name%></h4>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item hours">Hour(s) -               
+                  <li class="list-group-item hours">Hour(s)- 
+
+                      <!-- begin modal options -->              
                       <a class="clickModal" href="#close">
-                          <i class="fa hoursTimes fa-plus-circle modal-open" data-toggle="modal" data-target=".bd-example-modal-sm" aria-hidden="true"></i>
-                          <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                          <i id="_id<%=[i]%>" class="fa hoursTimes fa-plus-circle modal-open" data-toggle="modal" data-target=".bd-example-modal-sm-_id<%=[i]%>"" aria-hidden="true"></i>
+                          <div id="_id<%=[i]%>" class="modal fade bd-example-modal-sm-_id<%=[i]%>"" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-sm">
                               <div class="modal-content">
-                                  <form action="" class="modalOptions">
-                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="hoursFrom">
+                                  <form action="" class="modalOptions formClose<%=[i]%>">
+                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="hoursFrom<%=[i]%>">
                                           <option selected>Choose...</option>
-                                          <option value="3">3</option>
-                                          <option value="4">4</option>
-                                          <option value="5">5</option>
+                                          <option value="3">3 p.m.</option>
+                                          <option value="4">4 p.m.</option>
+                                          <option value="5">5 p.m.</option>
                                         </select>
                                         <p class="timeP">To</p>
-                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="hoursTo">
+                                        <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="hoursTo<%=[i]%>">
                                           <option selected>Choose...</option>
-                                          <option value="6">6</option>
-                                          <option value="7">7</option>
-                                          <option value="8">8</option>
+                                          <option value="6">6 p.m.</option>
+                                          <option value="7">7 p.m.</option>
+                                          <option value="8">8 p.m.</option>
                                         </select>
                                         <input type="submit" 
-                                       id="hours" class="btn btn-primary hoursTime">
+                                       id="_id<%=[i]%>" class="btn btn-primary closeButton modalLoop hoursTime<%=[i]%>">
                                   </form>
                               </div>
                             </div>
                           </div>
-                      </a>   
-                  
-
-                      <p class="madeHours clicked<%=[i]%> "><% found[i].hours %></p>  
-                  
+                      </a>
+                      <!-- modal end and hours/website begin -->   
+                      <p class="madeHours clicked<%=[i]%> "><% found[i].hours %></p> 
+                      <button type="button" class="btn saveBtn btn-danger">Save</button>
                   </li>
                   <li class="list-group-item rating">Rating: <%= found[i].rating.aggregate_rating%></li>
                 </ul>
