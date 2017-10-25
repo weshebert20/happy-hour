@@ -18,7 +18,7 @@ router.get('/', function(req, res){
 	res.render('./views/login');
 });
 
-router.get('/results', function(req,res){
+router.get('https://damp-brook-42509.herokuapp.com/results', function(req,res){
 	res.render('./views/home');
 });
 
