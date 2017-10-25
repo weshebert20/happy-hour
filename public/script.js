@@ -9,7 +9,7 @@ $( document ).ready(function() {
 		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q=' + name + '&count=8&sort=rating';
 
 		$.ajax({
-			type:'post',
+			type:'put',
 			url:'/results',
 			data: {nameURL:nameURL},
 			success: function(backend){
