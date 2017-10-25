@@ -46,7 +46,7 @@ app.use('/auth' , authRoutes);
 
 //Get ALL those routes
 var routes = require(__dirname + '/config/routes');
-app.use('/', routes);
+app.use('/https://damp-brook-42509.herokuapp.com/', routes);
 
 
 //////////////////////////////
