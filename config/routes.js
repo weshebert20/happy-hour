@@ -113,7 +113,7 @@ var find = function(object){
 };
 
 
-router.get("https://damp-brook-42509.herokuapp.com/resultsSearch", function(req, res){
+router.post("/resultsSearch", function(req, res){
 
   //get searched name from script.js (front-end)
   var name = req.body.nameURL;
