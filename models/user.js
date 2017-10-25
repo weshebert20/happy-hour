@@ -1,12 +1,9 @@
 var mongoose = require('mongoose');
-mongoose.connect( process.env.MONGODB_URI || 
-                  process.env.MONGOLAB_URI || 
-                  process.env.MONGOHQ_URL || 
-                  "mongodb://localhost/happy_hour");
+Schema = mongoose.Schema;
 
 
 // define the schema for our user model
-var userSchema = mongoose.Schema({
+var userSchema = new Schema({
     facebook         : {
         id           : String,
         token        : String,
@@ -23,4 +20,6 @@ var userSchema = mongoose.Schema({
 });
 
 // create the model for users and expose it to our app
-module.exports = mongoose.model('User', userSchema);
+var Use = mongoose.model('User', userSchema);
+
+module.exports = Use;
