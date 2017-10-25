@@ -52,8 +52,8 @@
                   <li class="list-group-item rating">Rating: <%= found[i].rating.aggregate_rating%></li>
                 </ul>
                 <div class="card-block sites">
-                  <a target="_blank" href=<%= found[i].url%> class="card-link">Website</a>
-                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[0].name%>" class="card-link">Directions</a>
+                  <a target="_blank" href=<%= found[i].url%> class="siteLink card-link">Website</a>
+                  <a target="_blank" href="http://maps.google.com/?q= + <%= found[0].name%>" class="card-link"><i class="fa arrow fa-compass" aria-hidden="true"></i></a>
                 </div>
                 <div>
                 <button type="submit" class="btn deleteMe saveBtn<%=[i]%> btnLog">Save</button>
