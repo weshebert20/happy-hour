@@ -18,7 +18,7 @@ router.get('/', function(req, res){
 	res.render('./views/login');
 });
 
-router.get('https://damp-brook-42509.herokuapp.com/results', function(req,res){
+router.get('/results', function(req,res){
 	res.render('./views/home');
 });
 
@@ -113,7 +113,7 @@ var find = function(object){
 };
 
 
-router.post("/resultsSearch", function(req, res){
+router.get("/resultsSearch", function(req, res){
 
   //get searched name from script.js (front-end)
   var name = req.body.nameURL;
