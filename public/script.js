@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
 		$.ajax({
 			type:'post',
-			url:'/resultsSearch',
+			url:'https://damp-brook-42509.herokuapp.com/resultsSearch',
 			data: {nameURL:nameURL},
 			success: function(backend){
 				$('#bodySecond').html(backend);
