@@ -116,7 +116,7 @@ router.get("/resultsSearch", function(req, res){
 
   //get searched name from script.js (front-end)
   var name = req.body.nameURL;
-
+  console.log(name);
   ///////////
   //KEY VAR//
   ///////////
@@ -136,7 +136,7 @@ router.get("/resultsSearch", function(req, res){
       //returns find function (name,rating,photo)
       var found = find(restaurants);
       //renders on page
-      res.render('./views/partials/homeSearch', {found});
+      res.render('./views/homeSearch', {found});
     } else {
       console.log(error);
     }
