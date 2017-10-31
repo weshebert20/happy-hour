@@ -13,7 +13,7 @@ $( document ).ready(function() {
 		$.ajax({	
 			datatype: "JSON",
 			async: true,		
-			type:'get',
+			type:'post',
 			url:'/resultsSearch',
 			data: {nameURL:nameURL},
 			success: function(homeSearch){
