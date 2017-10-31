@@ -112,7 +112,7 @@ var find = function(object){
 };
 
 
-router.get("/resultsSearch", function(req, res){
+router.post("/resultsSearch", function(req, res){
 
   //get searched name from script.js (front-end)
   var name = res.body.nameURL;

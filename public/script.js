@@ -12,7 +12,7 @@ $( document ).ready(function() {
 		console.log(nameURL);
 		$.ajax({	
 			async: true,		
-			type:'get',
+			type:'post',
 			url:'/resultsSearch',
 			data: JSON.stringify({nameURL:nameURL}),
 			success: function(homeSearch){
