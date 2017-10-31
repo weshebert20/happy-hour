@@ -9,13 +9,12 @@ $( document ).ready(function() {
 		
 		// add name searched value to URL
 		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q=' + name + '&count=8&sort=rating';
-		var json = JSON.stringify(nameURL);
-		console.log(json);
+		console.log(nameURL);
 		$.ajax({	
 			async: true,		
 			type:'get',
 			url:'/resultsSearch',
-			data: {json:json},
+			data: {nameURL:nameURL},
 			success: function(homeSearch){
 				$('#bodySecond').html(homeSearch);
 			}
