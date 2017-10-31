@@ -14,7 +14,7 @@ $( document ).ready(function() {
 			async: true,		
 			type:'post',
 			url:'/resultsSearch',
-			data: JSON.stringify({nameURL:nameURL}),
+			data: ({nameURL:nameURL}),
 			success: function(homeSearch){
 				$('#bodySecond').html(homeSearch);
 			}
