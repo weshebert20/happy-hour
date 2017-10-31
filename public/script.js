@@ -11,11 +11,10 @@ $( document ).ready(function() {
 		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q=' + name + '&count=8&sort=rating';
 		console.log(nameURL);
 		$.ajax({	
-			datatype: "JSON",
 			async: true,		
 			type:'get',
 			url:'/resultsSearch',
-			data: {nameURL:nameURL},
+			data: JSON.stringify({nameURL:nameURL}),
 			success: function(homeSearch){
 				$('#bodySecond').html(homeSearch);
 			}
