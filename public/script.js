@@ -13,7 +13,7 @@ $( document ).ready(function() {
 		$.ajax({	
 			async: true,		
 			type:'post',
-			url:'/results',
+			url:'/resultsS',
 			data: {nameURL:nameURL},
 			success: function(homeSearch){
 				$('#bodySecond').html(homeSearch);
