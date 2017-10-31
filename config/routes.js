@@ -136,7 +136,7 @@ router.post("/resultsSearch", function(req, res){
       //returns find function (name,rating,photo)
       var found = find(restaurants);
       //renders on page
-      res.render('./views/homeSearch', {found});
+      res.render('./views/partials/homeSearch', {found});
     } else {
       console.log(error);
     }
