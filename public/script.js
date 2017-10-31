@@ -8,7 +8,7 @@ $( document ).ready(function() {
 		var name = $('#inputName').val();
 		
 		// add name searched value to URL
-		var nameURL = 'http://developers.zomato.com/api/v2.1/search?q=' + name + '&count=8&sort=rating';
+		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q=' + name + '&count=8&sort=rating';
 		console.log(nameURL);
 		$.ajax({	
 			async: true,		
