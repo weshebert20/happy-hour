@@ -48,6 +48,14 @@ app.use('/auth' , authRoutes);
 var routes = require(__dirname + '/config/routes');
 app.use('/', routes);
 
+ app.use(function (req, res, next) {
+    if (req.headers['x-forwarded-proto'] === 'https') {
+      res.redirect('http://' + req.hostname + req.url);
+    } else {
+      next();
+    }
+  });
+
 
 //////////////////////////////
 //get connected to localhost//
