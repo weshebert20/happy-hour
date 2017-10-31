@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
 
 	$("#nameEnter").on("submit", function(){
-		event.stopPropagation();
+		event.preventDefault();
 		//get name searched value
 		var name = $('#inputName').val();
 		
@@ -11,7 +11,7 @@ $( document ).ready(function() {
 		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q=' + name + '&count=8&sort=rating';
 		console.log(nameURL);
 		$.ajax({	
-			async: true,		
+			async: false,		
 			type:'post',
 			url:'/resultsSearch',
 			data: {nameURL:nameURL},
