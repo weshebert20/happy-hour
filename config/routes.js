@@ -129,9 +129,10 @@ router.post("/resultsSearch", function(req, res){
   };
 
   request(options, function(err, response, body){
-    if(!err && response.statusCode === 200) {
+    if(!err) {
       //parses body
       var respObj = JSON.parse(body);
+      console.log(respObj);
       //returns restaurants in body
       var restaurants = respObj.restaurants;
       //returns find function (name,rating,photo)
