@@ -12,9 +12,9 @@ $( document ).ready(function() {
 		console.log(nameURL);
 		$.ajax({	
 			async: true,		
-			type:'post',
+			type:'get',
 			url:'/resultsSearch',
-			data: ({nameURL:nameURL}),
+			data: {nameURL:nameURL},
 			success: function(homeSearch){
 				$('#bodySecond').html(homeSearch);
 			}
