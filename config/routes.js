@@ -1,4 +1,3 @@
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -15,11 +14,11 @@ var db = require('../models');
 
 // route to log-in page
 router.get('/', function(req, res){
-	res.render('./views/login');
+  res.render('./views/login');
 });
 
 router.get('/results', function(req,res){
-	res.render('./views/home');
+  res.render('./views/home');
 });
 
 router.post('/hourTimes', function(req, res){
@@ -93,18 +92,18 @@ var getPhoto = 'https://i.pinimg.com/736x/11/54/89/11548944f15d77b5e948357024294
 
 //function that gets name/rating/photo
 var find = function(object){
-  if (object.length === 0){
-    return("Sorry");
+  if (object === " "){
+    console.log("Sorry");
   } else {
 
     var results = object.map(function(obj){
       var restaurantModify = {
-            _id: obj.restaurant.id,
-            name : obj.restaurant.name,
-            rating : obj.restaurant.user_rating,
+            _id: obj.restaurant.id || null,
+            name : obj.restaurant.name || null,
+            rating : obj.restaurant.user_rating || "0",
             photo : obj.restaurant.thumb || getPhoto,
-            url : obj.restaurant.url,
-            hours : obj.restaurant.hours
+            url : obj.restaurant.url || null,
+            hours : obj.restaurant.hours || null
           };
       return (restaurantModify);
       }); 
@@ -113,7 +112,7 @@ var find = function(object){
 };
 
 
-router.put("/results", function(req, res){
+router.post("/results", function(req, res){
 
   //get searched name from script.js (front-end)
   var name = req.body.nameURL;
@@ -137,7 +136,7 @@ router.put("/results", function(req, res){
       //returns find function (name,rating,photo)
       var found = find(restaurants);
       //renders on page
-      res.render('./views/homeSearch', {found});
+      res.render('./views/partials/homeSearch', {found});
     } else {
       console.log(error);
     }

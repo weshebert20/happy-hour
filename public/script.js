@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 	//ajax request getting searched zip into back end
+
+
 	$("#nameEnter").on("submit", function(){
 		event.preventDefault();
 		//get name searched value
@@ -8,12 +10,13 @@ $( document ).ready(function() {
 		// add name searched value to URL
 		var nameURL = 'https://developers.zomato.com/api/v2.1/search?q=' + name + '&count=8&sort=rating';
 
-		$.ajax({
-			type:'put',
+		$.ajax({	
+			async: true,		
+			type:'post',
 			url:'/results',
 			data: {nameURL:nameURL},
-			success: function(backend){
-				$('#bodySecond').html(backend);
+			success: function(homeSearch){
+				$('#bodySecond').html(homeSearch);
 			}
 		});
 	});
@@ -25,6 +28,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked0').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -37,6 +41,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked1').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -49,6 +54,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked2').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -61,6 +67,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked3').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -73,6 +80,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked4').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -85,6 +93,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked5').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -97,6 +106,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked6').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -109,6 +119,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked7').html();
 
 		$.ajax({
+			async: true,
 			type:'post',
 			url:'/hourTimes',
 			data: {id:id, name:name, hour:hour}
@@ -121,6 +132,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked0').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -135,6 +147,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked1').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -148,6 +161,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked2').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -161,6 +175,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked3').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -174,6 +189,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked4').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -187,6 +203,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked5').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -200,6 +217,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked6').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -213,6 +231,7 @@ $( document ).ready(function() {
 		var hour = $('.clicked7').html();
 
     	$.ajax({
+    		async: true,
       		method: 'DELETE',
       		url: '/hourTimes/Delete',
       		data: {id:id, name:name, hour:hour},
@@ -303,7 +322,14 @@ $( document ).ready(function() {
 		event.preventDefault();
 		$(this).attr('data-dismiss', 'modal');
 	});
+
+	$('#signOut').click(function() {
+    document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:3000";
 });
+
+
+});
+
 
 
 

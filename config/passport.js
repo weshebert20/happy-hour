@@ -57,14 +57,15 @@ new GoogleStrategy({
         });
     }));
 
+
 //setting up facebook strategy
 passport.use(
 new FacebookStrategy({
-  	clientID: keys.facebook.clientID,
-  	clientSecret: keys.facebook.clientSecret,
-  	callbackURL: keys.facebook.callbackURL
-	}, 
-	function(token, refreshToken, profile, done) {
+    clientID: keys.facebook.clientID,
+    clientSecret: keys.facebook.clientSecret,
+    callbackURL: keys.facebook.callbackURL
+    }, 
+    function(token, refreshToken, profile, done) {
 
         // asynchronous
         process.nextTick(function() {
@@ -104,5 +105,6 @@ new FacebookStrategy({
         });
 
     }));
+
 
 

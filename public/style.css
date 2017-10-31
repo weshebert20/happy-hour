@@ -76,19 +76,6 @@ body,
 	margin-right: 0;
 }
 
-/*	.log-in {
-	margin-left:9%;
-	width: 100%;
-	margin-right: 0;
-	margin-bottom: 3%;
-	}	
-
-	.sign-up {
-	margin-left:9%;
-	width:100%;
-	background-color: #8b9dc3;
-	}*/
-
 	.header_landing {
 		padding-top: 20%;
 		font-size: 5rem;
@@ -167,6 +154,11 @@ h1 {
 
 .logOut {
 	background-color: #3cc57c;
+}
+
+.hrefSignOut{
+	color: white;
+	text-decoration: none;
 }
 
 /*header photo*/
@@ -256,6 +248,12 @@ h1 {
 
 .siteLink {
 	margin-bottom: 2px;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+    color: white;
 }
 
 .modalOptions {
