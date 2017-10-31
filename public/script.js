@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
 
 	$("#nameEnter").on("submit", function(){
-		event.preventDefault();
+		event.stopPropagation();
 		//get name searched value
 		var name = $('#inputName').val();
 		
@@ -13,7 +13,7 @@ $( document ).ready(function() {
 		$.ajax({	
 			async: true,		
 			type:'post',
-			url:'/results',
+			url:'/resultsSearch',
 			data: {nameURL:nameURL},
 			success: function(homeSearch){
 				$('#bodySecond').html(homeSearch);
