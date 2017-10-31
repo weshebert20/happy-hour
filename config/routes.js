@@ -115,10 +115,8 @@ var find = function(object){
 router.get("/resultsSearch", function(req, res){
 
   //get searched name from script.js (front-end)
-  var one = req.params.json;
-  var name = JSON.stringify(one);
-
-  console.log(name);
+  var name = req.body.nameURL;
+  
   ///////////
   //KEY VAR//
   ///////////
