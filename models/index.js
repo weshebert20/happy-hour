@@ -1,6 +1,5 @@
-
 var mongoose = require("mongoose");
-var dbURI = 'mongodb://locationToMyMongoDB';
+mongoose.connect("mongodb://localhost/happy_hour");
 
 if (process.env.NODE_ENV === 'production') {
     dbURI = process.env.MONGOLAB_URI;
