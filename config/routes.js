@@ -137,8 +137,9 @@ router.post("/results", function(req, res){
       var restaurants = respObj.restaurants;
       //returns find function (name,rating,photo)
       var found = find(restaurants);
+      console.log(found);
       //renders on page
-      res.render('./views/partials/homeSearch', {found});
+      res.render('./views/homeSearch', {found});
     } else {
       console.log(error);
     }
