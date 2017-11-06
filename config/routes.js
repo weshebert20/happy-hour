@@ -112,7 +112,7 @@ var find = function(object){
 };
 
 
-router.post("/resultsSearch", function(req, res){
+router.post("/results", function(req, res){
 
   //get searched name from script.js (front-end)
   var name = req.body.nameURL;
@@ -124,7 +124,7 @@ router.post("/resultsSearch", function(req, res){
 
   var options = {
     url : name,
-    headers: {'user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'},
+    headers: {'user-key': '84d86141509866d80a7965697edb8965'},
     gzip:true
   };
 

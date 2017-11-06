@@ -1,9 +1,10 @@
 
 var mongoose = require("mongoose");
-mongoose.connect( process.env.MONGODB_URI || 
-                  process.env.MONGOLAB_URI || 
-                  process.env.MONGOHQ_URL || 
-                  "mongodb://localhost/happy_hour");
+var dbURI = 'mongodb://locationToMyMongoDB';
+
+if (process.env.NODE_ENV === 'production') {
+    dbURI = process.env.MONGOLAB_URI;
+}
 
 // module.exports.Restaurant = require("./user.js");
 module.exports.Restaurant = require("./rest.js");
