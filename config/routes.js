@@ -123,11 +123,10 @@ router.post("/results", function(req, res){
 
   var options = {
     url : name,
-    headers: {'user-key': '84d86141509866d80a7965697edb8965'},
-    gzip:true
+    headers: {'user-key': '84d86141509866d80a7965697edb8965'}
   };
 
-  request(options, function(err, response, body){
+  request.get(options, function(err, response, body){
     if(!err) {
       //parses body
       console.log(body);
