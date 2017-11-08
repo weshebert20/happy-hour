@@ -84,7 +84,8 @@ app.post("/results", function(req, res){
     host : 'developers.zomato.com',
     path: '/api/v2.1/reviews',
     method: 'GET',
-    headers: {'Content-Type': 'application/json; charset=utf-8','user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'}
+    headers: {'Content-Type': 'application/json; charset=utf-8','user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'},
+  	data: '{"res_id": "zoma.to/r/34343"}'
   };
 
   https.request(options, function(err, response, body){
