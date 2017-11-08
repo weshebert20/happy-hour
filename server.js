@@ -81,7 +81,7 @@ app.post("/results", function(req, res){
   ///////////
 //search?q=80218&count=8&sort=rating
   var options = {
-    uri:  'http://developers.zomato.com/api/v2.1/search?q=coffee',
+    uri:  'http://developers.zomato.com/api/v2.1/search?q=80209',
     method: 'GET',
     headers: {'Content-Type': 'application/json; charset=utf-8','user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'},
   	data: '{"res_id": "zoma.to/r/34343"}'
