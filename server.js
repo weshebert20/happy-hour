@@ -84,7 +84,7 @@ app.post("/results", function(req, res){
     uri:  name,
     method: 'GET',
     headers: {'Content-Type': 'application/json; charset=utf-8','user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'},
-  	data: '{"res_id": "zoma.to/r/34343"}'
+  	//data: '{"res_id": "zoma.to/r/34343"}'
   };
   console.log(options);
   request(options, function(err, response, body){
