@@ -117,7 +117,6 @@ router.post("/results", function(req, res){
   //get searched name from script.js (front-end)
   var name = req.body.nameURL;
   console.log(name);
-
   ///////////
   //KEY VAR//
   ///////////
@@ -131,13 +130,14 @@ router.post("/results", function(req, res){
   request(options, function(err, response, body){
     if(!err) {
       //parses body
+      console.log(body);
       var respObj = JSON.parse(body);
       console.log(respObj);
       //returns restaurants in body
       var restaurants = respObj.restaurants;
       //returns find function (name,rating,photo)
       var found = find(restaurants);
-      console.log(found);
+      
       //renders on page
       res.render('./views/homeSearch', {found});
     } else {

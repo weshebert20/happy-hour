@@ -1,5 +1,9 @@
+
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost/happy_hour");
+mongoose.connect( process.env.MONGODB_URI || 
+                  process.env.MONGOLAB_URI || 
+                  process.env.MONGOHQ_URL || 
+                  "mongodb://localhost/happy_hour");
 
 
 // define the schema for our user model

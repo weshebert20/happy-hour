@@ -3,8 +3,8 @@
 
 module.exports = {
 	google: {
-		clientID:'416431568801-q01qguk1k01mhbnn4btu0t3slvkfa0ft.apps.googleusercontent.com',
-		clientSecret: 'ct03GPa8DtdLJbyfchMp1CeJ',
+		clientID	  :'416431568801-q01qguk1k01mhbnn4btu0t3slvkfa0ft.apps.googleusercontent.com',
+		clientSecret  : 'ct03GPa8DtdLJbyfchMp1CeJ',
 		callbackURL   : '/auth/google/callback'
 	},
 	facebook: {
