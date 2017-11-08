@@ -3,6 +3,7 @@
 ////////////////////////////
 
 const express = require('express');
+const https = require('https');
 const authRoutes = require('./config/routes');
 const passportSetup = require('./config/passport');
 const app = express();
@@ -80,11 +81,13 @@ app.post("/results", function(req, res){
   ///////////
 
   var options = {
-    url : 'http://developers.zomato.com/api/v2.1/search?q=80218&count=8&sort=rating',
-    headers: {'user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'}
+    host : 'developers.zomato.com',
+    path: '/api/v2.1/search?q=80218&count=8&sort=rating',
+    method: 'GET',
+    headers: {'Content-type': 'application/json; charset=utf-8','user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'}
   };
 
-  request.get(options, function(err, response, body){
+  https.request(options, function(err, response, body){
     console.log(response);
     if(!err) {
       //parses body
