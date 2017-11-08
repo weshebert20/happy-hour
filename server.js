@@ -88,7 +88,7 @@ app.post("/results", function(req, res){
   	data: '{"res_id": "zoma.to/r/34343"}'
   };
 
-  https.request(options, function(err, response, body){
+  request(options, function(err, response, body){
     console.log(response);
     if(!err) {
       //parses body
