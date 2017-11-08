@@ -79,12 +79,12 @@ app.post("/results", function(req, res){
   ///////////
   //KEY VAR//
   ///////////
-
+//search?q=80218&count=8&sort=rating
   var options = {
     host : 'developers.zomato.com',
-    path: '/api/v2.1/search?q=80218&count=8&sort=rating',
+    path: '/api/v2.1/reviews',
     method: 'GET',
-    headers: {'Content-type': 'application/json; charset=utf-8','user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'}
+    headers: {'Content-Type': 'application/json; charset=utf-8','user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'}
   };
 
   https.request(options, function(err, response, body){
