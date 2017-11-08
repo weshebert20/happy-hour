@@ -91,6 +91,9 @@ var getPhoto = 'https://i.pinimg.com/736x/11/54/89/11548944f15d77b5e948357024294
 ///////////////////////
 
 //function that gets name/rating/photo
+
+/* 
+
 var find = function(object){
   if (object === " "){
     console.log("Sorry");
@@ -145,6 +148,7 @@ router.post("/results", function(req, res){
     }
   });
 });
-          
+     
+*/     
 
 module.exports = router;
