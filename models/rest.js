@@ -5,7 +5,7 @@ var mongoose = require('mongoose'),
 var RestaurantSchema = new Schema({
 		_id: String,
 		name: String,
-		hour: String
+		hour: String,
 });
 
 var Restaurant = mongoose.model('Restaurant', RestaurantSchema);

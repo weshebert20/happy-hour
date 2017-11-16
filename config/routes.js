@@ -91,9 +91,6 @@ var getPhoto = 'https://i.pinimg.com/736x/11/54/89/11548944f15d77b5e948357024294
 ///////////////////////
 
 //function that gets name/rating/photo
-
-/* 
-
 var find = function(object){
   if (object === " "){
     console.log("Sorry");
@@ -120,35 +117,33 @@ router.post("/results", function(req, res){
   //get searched name from script.js (front-end)
   var name = req.body.nameURL;
   console.log(name);
+
   ///////////
   //KEY VAR//
   ///////////
 
   var options = {
-    url : 'http://developers.zomato.com/api/v2.1/search?q=80218&count=8&sort=rating',
-    headers: {'user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'}
+    url : name,
+    headers: {'user-key': 'dbd65a3baa3d8dc9e8830dacf6da39a5'},
+    gzip:true
   };
 
-  request.get(options, function(err, response, body){
-    console.log(response);
+  request(options, function(err, response, body){
     if(!err) {
       //parses body
-      console.log(body);
       var respObj = JSON.parse(body);
       console.log(respObj);
       //returns restaurants in body
       var restaurants = respObj.restaurants;
       //returns find function (name,rating,photo)
       var found = find(restaurants);
-      
       //renders on page
-      res.render('./views/homeSearch', {found});
+      res.render('./views/partials/homeSearch', {found});
     } else {
       console.log(error);
     }
   });
 });
-     
-*/     
+          
 
 module.exports = router;
