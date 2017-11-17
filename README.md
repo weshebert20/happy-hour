@@ -1,5 +1,8 @@
 ## Happy + Hour(s)
 
+## Use on heroku
+https://damp-brook-42509.herokuapp.com/
+
 ## Git Hub
 https://github.com/weshebert20/happy-hour
 
