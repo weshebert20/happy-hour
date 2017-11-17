@@ -1,10 +1,11 @@
   <!-- searched portion -->
-  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <div class="container">
     <div class="row minOption">
       <div id="bodySecond">
         <div class="card-deck">
+
           <!-- begin card deck and loop through -->
           <% for(var i=0; i < found.length; i++) { %>
             <div class="card">
@@ -18,6 +19,7 @@
 
                       <!-- begin modal options -->              
                       <a class="clickModal fa-plus-circle" href="#close">
+                      <img class="plus-sign" src="http://www.kristianbalakan.com/img/plus.png">
                           <i id="_id<%=[i]%>" class="fa fa-3x hoursTimes fa-plus-circle modal-open" data-toggle="modal" data-target=".bd-example-modal-sm-_id<%=[i]%>"" aria-hidden="true"></i>
                           <div id="_id<%=[i]%>" class="modal fade bd-example-modal-sm-_id<%=[i]%>"" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-sm">
